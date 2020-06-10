@@ -1,0 +1,23 @@
+-----DATA BASE-----
+
+ADMIN WILL HAVE DEFAULT ID AS "ADMIN@GMAIL.COM" AND PASSWORD AS "admin123"
+
+
+DATA BASE TABLES-------------
+
+1)	CREATE DATABASE QUIZ;
+
+
+2)	USE QUIZ;
+
+
+3)	create table admin(mail nvarchar(1000) primary key,password varchar(200));
+
+
+4)	create table student(id integer primary key auto_increment,mail nvarchar(1000),password varchar(200),confirm_password varchar(200),username varchar(200),marks integer default 0);
+
+
+5)	create table question(question nvarchar(1000) unique,answer1 nvarchar(1000),answer2 nvarchar(1000),answer3 nvarchar(1000),answer4 nvarchar(1000),id integer primary key auto_increment,answer varchar(0));
+
+
+6)	create table answer(question nvarchar(1000),answer nvarchar(1000),correct boolean default 0,id integer primary key auto_increment);
